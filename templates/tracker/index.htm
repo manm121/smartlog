@@ -1,18 +1,100 @@
-{% load static %}
-<!DOCTYPE html>
+{%load static %}
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Smart Log</title>
-    <script src="{% static 'js/core.js' %}"></script>
-</head>
-<body>
-    <p>{{myObj}}</p>
-    <form action="{% url 'process_request' %}" >
-        <input type='text' name="ticket_number" >
-        <button type="submit">submit</button>
-    </form>
-</body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container-fluid my-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-4">
+                <form class="form-inline">
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Enter Site_id</label>
+                      <input type="text" class="form-control col-sm-3" id="inputPassword">
+                      <button type="submit" class="btn btn-primary mx-2 col-sm-3">GET</button>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-7 col-form-label">Last Update Open Ticket</label>
+                    <input class="form-control col-sm-5" type="text" placeholder="31/07/1995" readonly>
+                  </div>
+                </form>
+            </div>
+            <div class="col-md-12 my-4 table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr class="bg-dark text-white">
+                      <th scope="col" class="border text-center">IP Address</th>
+                      <th scope="col" class="border text-center">Controller</th>
+                      <th scope="col" class="border text-center">Banner</th>
+                      <th scope="col" class="border text-center">State</th>
+                       <th scope="col" class="border text-center">Open tickets</th>
+                      <th scope="col" class="border text-center">No of open Tickets</th>
+                      <th scope="col" class="border text-center">Past work Orders</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+        <tr>
+           <td><input type="text" class="form-control" readonly /></td>
+           <td><input type="text" class="form-control" readonly /></td>
+           <td><input type="text" class="form-control" readonly /></td>
+           <td><input type="text" class="form-control" readonly /></td>
+           <td><input type="text" class="form-control" readonly style="height:10vh;" /></td>
+           <td><input type="text" class="form-control" readonly style="height:10vh;" /></td>
+            <td><input type="text" class="form-control" readonly style="height:10vh;" /></td>
+        </tr>
+    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12 my-4 table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr class="bg-dark text-white">
+                      <th scope="col" class="border text-center">Special Event Discription</th>
+                      <th scope="col" class="border text-center">Exception Type</th>
+                      <th scope="col" class="border text-center">Exception-WO#</th>
+                      <th scope="col" class="border text-center">Over All Ticket Count</th>
+                       <th scope="col" class="border text-center">Part Work Order</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+                    <tr>
+                       <td><input type="text" style="height:15vh;" class="form-control" readonly /></td>
+                       <td><input type="text" style="height:15vh;" class="form-control" readonly /></td>
+                       <td><input type="text" style="height:15vh;" class="form-control" readonly /></td>
+                       <td><input type="text" style="height:15vh;" class="form-control" readonly /></td>
+                       <td><input type="text" style="height:15vh;" class="form-control" readonly /></td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="col-md-12 my-4 table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr class="bg-dark text-white">
+                      <th scope="col" class="border text-center">Special Event Discription</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+                    <tr>
+                       <td><input type="text" style="height:15vh;" class="form-control" readonly /></td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static "js/jquery-3.3.1.min.js" %}" ></script>
+    <script src="{% static "js/popper.min.js" %}" ></script>
+    <script src="{% static "js/bootstrap.min.js" %}" ></script>
+  </body>
 </html>
